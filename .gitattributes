@@ -1,0 +1,5 @@
+# Ignore Elm packages and compiled output when analyzing language statistics
+# for the Github repository.
+elm-stuff/* linguist-vendored
+elm.js linguist-vendored
+index.html linguist-vendored
