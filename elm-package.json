@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Display and format tabla notation for practice",
-    "repository": "https://github.com/mniebling/tabla",
+    "repository": "https://github.com/mniebling/tabla.git",
     "license": "MIT",
     "source-directories": [
         "src"
