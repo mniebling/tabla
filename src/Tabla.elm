@@ -50,15 +50,15 @@ rhythmLink rhythm =
     a [href rhythm.name] [text rhythm.name]
   ]
 
-vibhagToLiElement: String -> Html.Html
+vibhagToLiElement : String -> Html
 vibhagToLiElement string =
-  Html.li [] [Html.text string]
+  li [] [text string]
 
-rhythmToHtml: Rhythm -> Html.Html
+rhythmToHtml : Rhythm -> Html
 rhythmToHtml rhythm =
-  Html.div [] [
-    Html.h2 [] [Html.text rhythm.name]
-  , Html.ul [] (List.map vibhagToLiElement rhythm.vibhags)
+  div [] [
+    h2 [] [text rhythm.name]
+  , ul [] (List.map vibhagToLiElement rhythm.vibhags)
   ]
 
 -- Ready, go!
