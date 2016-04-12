@@ -1,0 +1,30 @@
+{
+  "name": "Tabla",
+  "version": "1.0.0",
+  "description": "Format and display tabla notation for practice",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mniebling/Tabla.git"
+  },
+  "author": "Mike Niebling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mniebling/Tabla/issues"
+  },
+  "homepage": "https://github.com/mniebling/Tabla",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "2.12.1",
+    "chokidar-cli": "1.2.0",
+    "elm": "0.16.0",
+    "parallelshell": "2.0.0"
+  },
+  "scripts": {
+    "elm": "elm",
+    "serve": "browser-sync start --server --files 'elm.compiled.js' 'index.html'",
+    "watch": "chokidar '**/*.elm' -c 'elm make src/Tabla.elm --output elm.compiled.js'",
+
+    "dev": "parallelshell 'npm run watch' 'npm run serve'"
+  }
+}
