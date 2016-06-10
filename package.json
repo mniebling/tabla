@@ -13,18 +13,46 @@
     "url": "https://github.com/mniebling/Tabla/issues"
   },
   "homepage": "https://github.com/mniebling/Tabla",
-  "dependencies": {},
+  "dependencies": {
+    "font-awesome": "4.6.3",
+    "lodash": "4.13.1",
+    "normalize.css": "4.1.1",
+    "vue": "1.0.24"
+  },
   "devDependencies": {
-    "browser-sync": "2.12.1",
-    "chokidar-cli": "1.2.0",
-    "elm": "0.16.0",
-    "parallelshell": "2.0.0"
+    "autoprefixer": "6.3.6",
+    "browser-sync": "2.12.10",
+    "browserify": "13.0.1",
+    "copyfiles": "0.2.1",
+    "glob-concat": "1.0.1",
+    "graceful-fs": "4.1.4",
+    "less": "2.7.1",
+    "lodash": "4.13.1",
+    "onchange": "2.0.0",
+    "parallelshell": "2.0.0",
+    "postcss": "5.0.21",
+    "rimraf": "2.5.1"
   },
   "scripts": {
-    "elm": "elm",
-    "serve": "browser-sync start --server --files 'elm.compiled.js' 'index.html'",
-    "watch": "chokidar '**/*.elm' -c 'elm make src/Tabla.elm --output elm.compiled.js'",
+    "clean": "rimraf dist/*",
 
-    "dev": "parallelshell 'npm run watch' 'npm run serve'"
+    "prebuild": "npm run clean -s",
+    "build": "npm run build:static && npm run build:js && npm run build:styles",
+
+    "build:static": "copyfiles -u 2 node_modules/font-awesome/fonts/* dist",
+    "postbuild:static": "copyfiles -u 1 src/index.html dist",
+    "watch:static": "onchange 'src' -- npm run build:static",
+
+    "build:js": "browserify src/app.js > dist/bundled.js",
+    "watch:js": "onchange 'src' -- npm run build:js",
+
+    "build:styles": "node tasks/styles.js",
+    "watch:styles": "onchange 'src/styles' -- npm run build:styles",
+
+    "watch": "parallelshell 'npm run watch:static' 'npm run watch:js' 'npm run watch:styles'",
+
+    "serve": "browser-sync start --files 'src' --server 'dist'",
+
+    "dev": "npm run build && parallelshell 'npm run watch' 'npm run serve'"
   }
 }

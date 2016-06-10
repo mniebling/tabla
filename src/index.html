@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabla</title>
+	<link rel="stylesheet" type="text/css" href="compiled.css">
+</head>
+
+<body id="app">
+
+	<!-- Todo: componentize -->
+	<h2>Tabla</h2>
+
+	<ul>
+		<li v-for="rhythm in allRhythms">
+			<a href="javascript:void(0)" v-on:click="changeRhythm(rhythm)">{{ rhythm.name }}</a>
+		</li>
+	</ul>
+
+	<h3>{{ currentRhythm.name }}</h3>
+
+	<p
+		v-for="measure in currentRhythm.measures"
+		track-by="$index">
+		{{ measure }}
+	</p>
+
+	<script src="bundled.js"></script>
+</body>
+</html>
