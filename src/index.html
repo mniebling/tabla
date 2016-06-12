@@ -7,22 +7,24 @@
 
 <body id="app">
 
-	<!-- Todo: componentize -->
-	<h2>Tabla</h2>
+	<div class="o-page-container">
+		<!-- Todo: componentize -->
+		<h2>Tabla</h2>
 
-	<ul>
-		<li v-for="rhythm in allRhythms">
-			<a href="javascript:void(0)" v-on:click="changeRhythm(rhythm)">{{ rhythm.name }}</a>
-		</li>
-	</ul>
+		<ul>
+			<li v-for="rhythm in allRhythms">
+				<a href="javascript:void(0)" v-on:click="changeRhythm(rhythm)">{{ rhythm.name }}</a>
+			</li>
+		</ul>
 
-	<h3>{{ currentRhythm.name }}</h3>
+		<h3>{{ currentRhythm.name }}</h3>
 
-	<p
-		v-for="measure in currentRhythm.measures"
-		track-by="$index">
-		{{ measure }}
-	</p>
+		<p
+			v-for="measure in currentRhythm.measures"
+			track-by="$index">
+			{{ measure }}
+		</p>
+	</div>
 
 	<script src="bundled.js"></script>
 </body>

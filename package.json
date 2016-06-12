@@ -41,17 +41,17 @@
 
     "build:static": "copyfiles -u 2 node_modules/font-awesome/fonts/* dist",
     "postbuild:static": "copyfiles -u 1 src/index.html dist",
-    "watch:static": "onchange 'src' -- npm run build:static",
+    "watch:static": "onchange 'src/index.html' 'src/fonts/' -- npm run build:static",
 
     "build:js": "browserify src/app.js > dist/bundled.js",
-    "watch:js": "onchange 'src' -- npm run build:js",
+    "watch:js": "onchange 'src/*.js' -- npm run build:js",
 
     "build:styles": "node tasks/styles.js",
-    "watch:styles": "onchange 'src/styles' -- npm run build:styles",
+    "watch:styles": "onchange 'src/*.less' 'src/*.css' -- npm run build:styles",
 
     "watch": "parallelshell 'npm run watch:static' 'npm run watch:js' 'npm run watch:styles'",
 
-    "serve": "browser-sync start --files 'src' --server 'dist'",
+    "serve": "browser-sync start --files 'dist' --server 'dist'",
 
     "dev": "npm run build && parallelshell 'npm run watch' 'npm run serve'"
   }
