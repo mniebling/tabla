@@ -28,7 +28,7 @@
     "graceful-fs": "4.1.4",
     "less": "2.7.1",
     "lodash": "4.13.1",
-    "onchange": "2.0.0",
+    "onchange": "2.5.0",
     "parallelshell": "2.0.0",
     "postcss": "5.0.21",
     "rimraf": "2.5.1"
