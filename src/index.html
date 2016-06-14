@@ -19,11 +19,7 @@
 
 		<h3>{{ currentRhythm.name }}</h3>
 
-		<p
-			v-for="measure in currentRhythm.measures"
-			track-by="$index">
-			{{ measure }}
-		</p>
+		<rhythm :rhythm="currentRhythm"></rhythm>
 	</div>
 
 	<script src="bundled.js"></script>

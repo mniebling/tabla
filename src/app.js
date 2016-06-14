@@ -6,22 +6,30 @@ var Vue = require('vue')
 var teenTaal = require('./rhythms/teen-taal.js')
 var ekTaal = require('./rhythms/ek-taal.js')
 
+var Rhythm = require('./components/rhythm.vue')
+var Measure = require('./components/measure.vue')
+
 
 var vm = new Vue({
 
-	el: '#app',
+	el: '#app'
 
-	data: {
+, data: {
 		allRhythms: [
 			teenTaal,
 			ekTaal
 		],
 		currentRhythm: {}
-	},
+	}
 
-	methods: {
+, components: {
+		rhythm: Rhythm
+	, measure: Measure
+	}
+
+, methods: {
 		changeRhythm: function (newRhythm) {
-			vm.currentRhythm = newRhythm;
+			vm.currentRhythm = newRhythm
 		}
 	}
 })

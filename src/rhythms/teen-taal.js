@@ -1,9 +1,26 @@
 module.exports = {
 	name: 'Teen Taal',
-	measures: [
-		'dha dhin dhin dha',
-		'dha dhin dhin dha',
-		'dha tin tin ta',
-		'ta dhin dhin dha'
+	measures:
+	[
+		[ { bol: 'dha' }
+		, { bol: 'dhin' }
+		, { bol: 'dhin' }
+		, { bol: 'dha' }
+		]
+	, [ { bol: 'dha' }
+		, { bol: 'dhin' }
+		, { bol: 'dhin' }
+		, { bol: 'dha' }
+		]
+	, [ { bol: 'dha' }
+		, { bol: 'tin' }
+		, { bol: 'tin' }
+		, { bol: 'ta' }
+		]
+	, [ { bol: 'ta' }
+		, { bol: 'dhin' }
+		, { bol: 'dhin' }
+		, { bol: 'dha' }
+		]
 	]
 }
