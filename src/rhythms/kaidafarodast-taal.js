@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'Ek Taal',
+	name: 'Kaidafarodast Taal',
 	measures:
 	[
 		[ { bol: 'dhin', accent: 'x' }
@@ -11,10 +11,13 @@ module.exports = {
 		]
 	, [ { bol: 'ka', accent: '0' }
 		, { bol: 'ta' }
-		, { bol: 'dha ge', accent: '3' }
+		, { bol: 'dhin na', accent: '3' }
+		, { bol: 'ka dha' }
+		]
+	, [ { bol: 'terekete', accent: '4' }
+		, { bol: 'dhin na' }
+		, { bol: 'ka dha', accent: '5' }
 		, { bol: 'terekete' }
-		, { bol: 'dhin', accent: '4' }
-		, { bol: 'na' }
 		]
 	]
 }
