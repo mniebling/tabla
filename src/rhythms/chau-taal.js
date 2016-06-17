@@ -5,14 +5,14 @@ module.exports = {
 		[ { bol: 'dha', accent: 'x' }
 		, { bol: 'dha' }
 		, { bol: 'dhin', accent: '0' }
-		, { bol: 'ta' }
-		, { bol: 'ka te', accent: '2' }
+		, { bol: 'na' }
+		, { bol: 'ke te', accent: '2' }
 		, { bol: 'dha' }
 		]
 	, [ { bol: 'dhin', accent: '0' }
-		, { bol: 'ta' }
+		, { bol: 'na' }
 		, { bol: 'ti te', accent: '3' }
-		, { bol: 'ka ta' }
+		, { bol: 'ke na' }
 		, { bol: 'ge di', accent: '4' }
 		, { bol: 'ge na' }
 		]

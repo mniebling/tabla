@@ -2,7 +2,12 @@
 	<div class="c-measure">
 		<div
 			class="c-measure__beat"
-			v-for="beat in measure">{{ beat.bol }}</div>
+			v-for="beat in measure">
+
+			<div class="c-measure__beat__accent">{{ beat.accent }}</div>
+			<div class="c-measure__beat__bol">{{ beat.bol }}</div>
+			<!-- <div class="c-measure__beat__number">{{ $index + 1 }}</div> -->
+		</div>
 	</div>
 </template>
 
@@ -21,11 +26,29 @@ module.exports = {
 <style>
 .c-measure {
 	display: flex;
-	margin-bottom: 5px;
-	width: 40%;
+	margin-bottom: 25px;
 }
 
 .c-measure__beat {
-	flex-basis: 125px;
+	flex-basis: 100px;
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.c-measure__beat__accent {
+	color: #999;
+	height: 21px;
+	padding-left: 5px;
+}
+
+.c-measure__beat__bol {
+	background-color: #f5f5f5;
+	padding: 4px 8px;
+}
+
+.c-measure__beat__number {
+	color: #72bcd4;
+	font-size: 14px;
+	padding-left: 5px;
 }
 </style>

@@ -13,11 +13,14 @@
 
 		<ul>
 			<li v-for="rhythm in allRhythms">
-				<a href="javascript:void(0)" v-on:click="changeRhythm(rhythm)">{{ rhythm.name }}</a>
+				<a
+					href="javascript:void(0)"
+					v-text="rhythm.name"
+					v-on:click="changeRhythm(rhythm)"></a>
 			</li>
 		</ul>
 
-		<h3>{{ currentRhythm.name }}</h3>
+		<h3 v-text="currentRhythm.name"></h3>
 
 		<rhythm :rhythm="currentRhythm"></rhythm>
 	</div>

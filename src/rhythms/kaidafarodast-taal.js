@@ -9,14 +9,14 @@ module.exports = {
 		, { bol: 'tun', accent: '2' }
 		, { bol: 'na' }
 		]
-	, [ { bol: 'ka', accent: '0' }
-		, { bol: 'ta' }
+	, [ { bol: 'ke', accent: '0' }
+		, { bol: 'na' }
 		, { bol: 'dhin na', accent: '3' }
-		, { bol: 'ka dha' }
+		, { bol: 'ke dha' }
 		]
 	, [ { bol: 'terekete', accent: '4' }
 		, { bol: 'dhin na' }
-		, { bol: 'ka dha', accent: '5' }
+		, { bol: 'ke dha', accent: '5' }
 		, { bol: 'terekete' }
 		]
 	]

@@ -9,7 +9,7 @@ module.exports = {
 		, { bol: 'tun', accent: '2' }
 		, { bol: 'na' }
 		]
-	, [ { bol: 'ka', accent: '0' }
+	, [ { bol: 'ke', accent: '0' }
 		, { bol: 'ta' }
 		, { bol: 'dha ge', accent: '3' }
 		, { bol: 'terekete' }
